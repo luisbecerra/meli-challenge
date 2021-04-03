@@ -1,0 +1,78 @@
+@import "./../../styles/variables.scss";
+
+
+.shoppingCart{
+  max-width: 1024px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  @media (min-width: $bp-tablet) {
+      padding-top: 45px;
+  }
+
+  @media (min-width: $bp-laptop) {
+      margin: 0 auto;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 80px;
+  
+    li {
+      position: relative;
+      display: flex;
+      
+      &:first-child {
+        > div {
+            @media (min-width: $bp-laptop) {
+                border-top-right-radius: 4px;
+                border-top-left-radius: 4px;
+            }
+        }
+      }
+  
+      &:last-child {
+        > div {
+            @media (min-width: $bp-laptop) {
+                border-bottom-right-radius: 4px;
+                border-bottom-left-radius: 4px;
+            }
+        }
+
+
+      }
+  
+      & ~ li {
+        border-top: 1px solid #eee;
+      }
+
+      .scProduct{
+        width: 80%;
+      }
+
+      .scProductTimes{
+        width: 10%;
+        background: white;
+        text-align: center;
+        line-height: 200px;
+        font-weight: $weight1;
+      }
+
+      button {
+        width: 10%;
+        background: white;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  
+}

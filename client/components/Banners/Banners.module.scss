@@ -1,0 +1,11 @@
+@import './../../styles/variables.scss';
+
+.banners {
+  display: flex;
+  flex-direction: column;
+
+  img {
+    padding-top: 2rem;
+    width: 100%;
+  }
+}

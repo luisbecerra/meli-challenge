@@ -1,27 +1,30 @@
 export const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'TICK':
+    case 'ADD_TO_CART':
       return {
         ...state,
-        lastUpdate: action.lastUpdate,
-        light: !!action.light,
+        shoppingCart: addToCart(state, action)
       }
-    case 'INCREMENT':
+    case 'REMOVE_TO_CART':
       return {
         ...state,
-        count: state.count + 1,
-      }
-    case 'DECREMENT':
-      return {
-        ...state,
-        count: state.count - 1,
-      }
-    case 'RESET':
-      return {
-        ...state,
-        count: initialState.count,
+        shoppingCart: [...state.shoppingCart.filter((sc) => sc.id !== action.product.id)]
       }
     default:
       return state
+  }
+}
+
+const addToCart = (state, action) => {
+  const productIndex = state.shoppingCart.findIndex((sc) => sc.id === action.product.id)
+
+  console.log('productIndex', productIndex);
+
+  if(productIndex !== -1) {
+    state.shoppingCart[productIndex].times++
+    return state.shoppingCart;
+  } else {
+    action.product.times = 1;
+    return [...state.shoppingCart, action.product];
   }
 }
