@@ -1,0 +1,27 @@
+@import './../../styles/variables.scss';
+
+.noResults {
+  max-width: 1024px;
+  width: 100%;
+
+  @media (min-width: $bp-tablet) {
+    padding-top: 45px;
+  }
+
+  @media (min-width: $bp-laptop) {
+    margin: 0 auto;
+  }
+
+  h3 {
+    color: $orange;
+    font-size: $font9;
+    font-style: italic;
+    padding: 22px;
+    text-align: center;
+    line-height: 1.35;
+
+    @media (min-width: $bp-tablet) {
+      font-size: $font7;
+    }
+  }
+}

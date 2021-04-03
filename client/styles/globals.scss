@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap');
+@import './variables.scss';
+
+* {
+  font-family: 'Roboto', sans-serif; 
+}
+
+body {
+  background: $backgroundGrey;
+  margin: 0;
+
+  input, button {
+    outline: none;
+  }
+
+  a {
+    text-decoration: none;
+    cursor: pointer;
+    color: $textBlack;
+
+    &:focus, &:active, &:visited {
+      color: $textBlack;
+    }
+
+    &:hover {
+      color: $hoverTextBlack;
+    }
+  }
+}
+

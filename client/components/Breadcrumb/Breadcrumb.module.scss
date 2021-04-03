@@ -1,0 +1,44 @@
+@import './../../styles/variables.scss';
+
+.breadcrumb {
+  display: none;
+  height: 45px;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  @media (min-width: $bp-tablet) {
+    display: flex;
+    align-items: center;
+    padding: 0 22px;
+  }
+
+  @media (min-width: $bp-laptop) {
+    padding: 0;
+  }
+
+  span {
+    font-size: $font9;
+    line-height: 1.45;
+    display: inherit;
+    color: $grey;
+    cursor: pointer;
+    font-weight: $weight2;
+
+    &:last-child,
+    &:hover {
+      color: $textBlack;
+    }
+
+    & ~ span {
+      position: relative;
+      margin-left: 22px;
+
+      &::before {
+        position: absolute;
+        left: -22px;
+        content: url('/chevron.svg');
+      }
+    }
+  }
+}

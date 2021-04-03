@@ -1,8 +1,13 @@
-import Page from '../components/page'
 import { initializeStore } from '../store/index'
+import SearchBar from '../components/SearchBar'
+import Layout from '../components/Layout'
 
 export default function Index() {
-  return <Page />
+  return (
+    <Layout>
+      <SearchBar autoFocus />
+    </Layout>
+  )
 }
 
 

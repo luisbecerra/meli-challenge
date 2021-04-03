@@ -1,0 +1,162 @@
+@import './../../styles/variables.scss';
+
+.productDetail {
+  max-width: 1024px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  @media (min-width: $bp-tablet) {
+    padding-top: 45px;
+  }
+
+  @media (min-width: $bp-laptop) {
+    margin: 0 auto;
+  }
+}
+
+.grid {
+  display: grid;
+  margin-bottom: 80px;
+  background: white;
+  padding: 22px;
+  border-radius: 4px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-row: repeat(3, 1fr);
+  grid-template-areas:
+    'picture picture picture'
+    'primaryInfo primaryInfo primaryInfo'
+    'secondaryInfo secondaryInfo secondaryInfo';
+
+  @media (min-width: $bp-tablet) {
+    padding: 32px;
+    grid-template-areas:
+      'picture picture primaryInfo'
+      'picture picture primaryInfo'
+      'secondaryInfo secondaryInfo .';
+  }
+}
+
+.picture {
+  grid-area: picture;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+
+  @media (min-width: $bp-tablet) {
+    padding: 12px;
+  }
+
+  img {
+    object-fit: contain;
+    max-width: 100%;
+  }
+}
+
+.primaryInfo {
+  grid-area: primaryInfo;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+
+  @media (min-width: $bp-tablet) {
+    padding: 12px;
+  }
+
+  > span {
+    font-size: $font9;
+    color: $lightGrey;
+    line-height: 1.35;
+    font-weight: $weight2;
+  }
+
+  h1 {
+    font-size: $font5;
+    margin: 12px 0 22px 0;
+
+    @media (min-width: $bp-tablet) {
+      font-size: $font3;
+      line-height: 1.18;
+    }
+  }
+
+  label {
+    color: $green;
+    font-size: $font10;
+    line-height: 14px;
+    font-weight: $weight2;
+    margin-top: 12px;
+
+    @media (min-width: $bp-tablet) {
+      font-size: $font9;
+      line-height: 1.3;
+    }
+  }
+
+  button {
+    margin-top: 48px;
+    height: 50px;
+    width: 100%;
+    border-radius: 4px;
+    border: none;
+    background: $blue;
+    color: white;
+    font-size: $font7;
+    font-weight: $weight2;
+    cursor: pointer;
+  }
+}
+
+.secondaryInfo {
+  grid-area: secondaryInfo;
+  padding: 10px;
+
+  @media (min-width: $bp-tablet) {
+    padding: 12px;
+  }
+
+  h3 {
+    font-size: $font7;
+    color: $grey;
+    line-height: 1.35;
+    margin: 40px 0 32px 0;
+
+    @media (min-width: $bp-tablet) {
+      font-size: $font4;
+      font-weight: bold;
+      color: $textBlack;
+    }
+  }
+
+  p {
+    font-size: $font8;
+    line-height: 1.35;
+    color: $grey;
+    white-space: pre-wrap;
+  }
+}
+
+.price {
+  display: inline-block;
+
+  span {
+    font-size: $font2;
+    line-height: 1em;
+    color: $textBlack;
+    font-weight: $weight2;
+
+    @media (min-width: $bp-tablet) {
+      font-size: $font1;
+    }
+
+    &.decimals {
+      position: relative;
+      top: -8px;
+      right: -2px;
+      font-size: $font6;
+      line-height: 1.8;
+    }
+  }
+}

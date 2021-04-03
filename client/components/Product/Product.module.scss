@@ -1,0 +1,117 @@
+@import './../../styles/variables.scss';
+
+.product {
+  background: white;
+  height: 140px;
+
+  @media (min-width: $bp-tablet) {
+    height: 200px;
+  }
+
+  .link {
+    height: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin: 0 22px;
+    cursor: pointer;
+
+    @media (min-width: $bp-tablet) {
+      pointer-events: none;
+    }
+
+    > div {
+      > a {
+        pointer-events: none;
+        display: inline-block;
+
+        @media (min-width: $bp-tablet) {
+          pointer-events: auto;
+        }
+      }
+
+      img {
+        width: 90px;
+        object-fit: contain;
+        max-height: 90px;
+
+        @media (min-width: $bp-tablet) {
+          width: 150px;
+          max-height: 150px;
+        }
+      }
+
+      &:first-child {
+        width: 90px;
+        @media (min-width: $bp-tablet) {
+          width: 150px;
+        }
+      }
+
+      &:last-child {
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 0 12px;
+
+        @media (min-width: $bp-tablet) {
+          padding: 0 22px;
+        }
+
+        .title {
+          font-size: $font9;
+          line-height: 18px;
+          font-weight: $weight2;
+          margin-bottom: 12px;
+
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+
+          @media (min-width: $bp-tablet) {
+            font-size: $font6;
+            line-height: 1.2;
+          }
+        }
+
+        label {
+          color: $green;
+          font-size: $font9;
+          line-height: 14px;
+          margin-top: 12px;
+          font-weight: $weight2;
+
+          @media (min-width: $bp-tablet) {
+            line-height: 1.3;
+            margin-top: 32px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.price {
+  display: inline-block;
+
+  span {
+    font-size: $font6;
+    line-height: 1;
+    color: $textBlack;
+
+    @media (min-width: $bp-tablet) {
+      font-size: $font4;
+      line-height: 1.1;
+    }
+
+    &.decimals {
+      position: relative;
+      top: -8px;
+      right: -2px;
+      font-size: $font10;
+    }
+  }
+}
