@@ -27,6 +27,15 @@ describe("TEST server.js", () => {
       });
   });
 
+  it("GET /items/:id , should return book where id is undefined", async () => {
+    return request(app)
+      .get(`/items/`)
+      .expect(400)
+      .then(res => {
+        expect(res.body).toMatchSnapshot();
+      });
+  });
+
   it("GET /items , should return the successfully the products list", async () => {
 
     return request(app)
@@ -40,27 +49,9 @@ describe("TEST server.js", () => {
   it("GET /items , should return error if query is null", async () => {
 
     return request(app)
-      .get("/items?query=celulares")
+      .get("/items")
       .expect(400)
       .then(res => {
-        expect(res.body).toMatchSnapshot();
-      });
-  });
-
-  it("GET /items , should return error if author is null", async () => {
-    const book = {
-      id: "8",
-      author: null,
-      price: 100,
-      genre: "Health"
-    };
-
-    return request(app)
-      .post("/book")
-      .send(book)
-      .expect(400)
-      .then(res => {
-        // { error: 'Invalid params' }
         expect(res.body).toMatchSnapshot();
       });
   });

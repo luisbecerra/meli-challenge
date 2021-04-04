@@ -21,7 +21,7 @@ const Item = ({ errorCode, item }) => {
 
 Item.getInitialProps = async ({ query }) => {
   const { id } = query
-  const response = await fetch(`http://localhost:3000/api/items/${id}`)
+  const response = await fetch(`http://localhost:5000/items/${id}`)
   const item = await response.json()
   const { statusCode } = item
   let errorCode = statusCode > 200 ? statusCode : false
