@@ -1,5 +1,5 @@
 const fetch = require("isomorphic-unfetch");
-const { getPriceFraction, getPriceCents } = require("./lib/helpers");
+const { getPriceFraction, getPriceCents } = require("../lib/helpers");
 
 const getItems = async (url, q) => {
   const searhUrl = `${url}/sites/MLA/search?q=${q}`

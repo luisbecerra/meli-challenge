@@ -1,5 +1,5 @@
 const fetch = require("isomorphic-unfetch");
-const { getPriceFraction, getPriceCents } = require("./lib/helpers");
+const { getPriceFraction, getPriceCents } = require("../lib/helpers");
 
 const getItem = async (url, id) => {
   const productUrl = `${url}/items/${id}`;
