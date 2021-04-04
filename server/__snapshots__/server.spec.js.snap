@@ -1,0 +1,112 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TEST server.js GET / route , should return message 1`] = `
+Object {
+  "msg": "WORKING!!!",
+}
+`;
+
+exports[`TEST server.js GET /items , should return the successfully the products list 1`] = `
+Object {
+  "author": Object {
+    "lastname": "Becerra",
+    "name": "Felipe",
+  },
+  "categories": Array [
+    "Celulares y Teléfonos",
+    "Celulares y Smartphones",
+  ],
+  "items": Array [
+    Object {
+      "condition": "new",
+      "free_shipping": true,
+      "id": "MLA904396343",
+      "picture": "http://http2.mlstatic.com/D_857252-MLA44280741132_122020-I.jpg",
+      "price": Object {
+        "amount": 17499,
+        "currency": "ARS",
+        "decimals": 0,
+      },
+      "title": "Nokia 23 M 32 Gb Verde Claro 2 Gb Ram",
+    },
+    Object {
+      "condition": "new",
+      "free_shipping": true,
+      "id": "MLA846618954",
+      "picture": "http://http2.mlstatic.com/D_780046-MLA44443560272_122020-I.jpg",
+      "price": Object {
+        "amount": 47999,
+        "currency": "ARS",
+        "decimals": 0,
+      },
+      "title": "Samsung Galaxy A51 128 Gb Prism Crush White 4 Gb Ram",
+    },
+    Object {
+      "condition": "new",
+      "free_shipping": true,
+      "id": "MLA885089576",
+      "picture": "http://http2.mlstatic.com/D_886106-MLA43751372527_102020-I.jpg",
+      "price": Object {
+        "amount": 31999,
+        "currency": "ARS",
+        "decimals": 0,
+      },
+      "title": "Motorola One Fusion 128 Gb Verde Esmeralda 4 Gb Ram",
+    },
+    Object {
+      "condition": "new",
+      "free_shipping": true,
+      "id": "MLA879498982",
+      "picture": "http://http2.mlstatic.com/D_629073-MLA45229549853_032021-I.jpg",
+      "price": Object {
+        "amount": 39999,
+        "currency": "ARS",
+        "decimals": 0,
+      },
+      "title": "Samsung Galaxy A31 128 Gb Prism Crush Black 4 Gb Ram",
+    },
+  ],
+}
+`;
+
+exports[`TEST server.js GET /items/:id , should return book where id=MLA904396343 1`] = `
+Object {
+  "author": Object {
+    "lastname": "Becerra",
+    "name": "Felipe",
+  },
+  "categories": Array [
+    "Celulares y Teléfonos",
+    "Celulares y Smartphones",
+  ],
+  "item": Object {
+    "condition": "new",
+    "description": "Pensado para vos
+El Nokia 23 M posee el novedoso sistema operativo Android 10 que incorpora respuestas inteligentes y acciones sugeridas para todas tus aplicaciones. Entre sus diversas funcionalidades encontrarás el tema oscuro, navegación por gestos y modo sin distracciones, para que completes tus tareas mientras disfrutás al máximo tu dispositivo.
+
+Doble cámara y más detalles
+Sus 2 cámaras traseras de 13 Mpx/2 Mpx te permitirán tomar imágenes con más detalles y lograr efectos únicos como el famoso modo retrato de poca profundidad de campo.
+
+Además, el dispositivo cuenta con cámara frontal de 5 Mpx para que puedas sacarte divertidas selfies o hacer videollamadas.
+
+Reconocimiento facial para mayor seguridad
+Acercá el dispositivo a tu rostro para desbloquearlo instantáneamente. Su precisa tecnología de reconocimiento facial te garantiza un acceso al equipo rápido y seguro. 
+
+Batería superior
+¡Desenchufate! Con la súper batería de 4000 mAh tendrás energía por mucho más tiempo para jugar, ver series o trabajar sin necesidad de recargar tu teléfono.
+
+El espacio que necesitás
+Con su memoria interna de 32 GB descargá tus aplicaciones favoritas y guardá todas las fotos y videos que quieras.",
+    "free_shipping": true,
+    "id": "MLA904396343",
+    "picture": "http://http2.mlstatic.com/D_857252-MLA44280741132_122020-O.jpg",
+    "price": Object {
+      "amount": 17499,
+      "currency": "ARS",
+      "decimals": 0,
+    },
+    "sold_quantity": 500,
+    "title": "Nokia 23 M 32 Gb Verde Claro 2 Gb Ram",
+  },
+}
+`;
