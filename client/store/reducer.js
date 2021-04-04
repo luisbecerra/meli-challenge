@@ -18,8 +18,6 @@ export const reducer = (state = initialState, action) => {
 const addToCart = (state, action) => {
   const productIndex = state.shoppingCart.findIndex((sc) => sc.id === action.product.id)
 
-  console.log('productIndex', productIndex);
-
   if(productIndex !== -1) {
     state.shoppingCart[productIndex].times++
     return state.shoppingCart;

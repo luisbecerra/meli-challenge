@@ -27,7 +27,7 @@ const Product = ({ product }) => {
             {price && (
               <div className={styles.price}>
                 <span>{CURRENCY[price.currency]}&nbsp;</span>
-                <span>{getFormattedPrice(price.amount)}</span>
+                <span data-testid={`product-price-${id}`}>{getFormattedPrice(price.amount)}</span>
                 {price.decimals > 0 && <span className="decimals">{price.decimals}</span>}
               </div>
             )}

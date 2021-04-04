@@ -47,7 +47,7 @@ const ProductDetail = ({ product }) => {
         </div>
 
         <div className={styles.primaryInfo}>
-          <span>
+          <span data-testid="sold-quantity">
             {conditionDisplay && conditionDisplay}
             {conditionDisplay && hasSold && " - "}
             {hasSold &&
@@ -66,9 +66,10 @@ const ProductDetail = ({ product }) => {
             </div>
           )}
 
-          {free_shipping && <label>Envío gratis</label>}
+          {free_shipping && <label data-testid="free-shipping-label">Envío gratis</label>}
 
           <button
+            data-testid="add-to-cart-button"
             onClick={() => {
               addToCart(product.item);
             }}

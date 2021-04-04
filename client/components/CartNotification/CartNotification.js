@@ -21,7 +21,7 @@ const CartNotification = () => {
       <Link href="/cart">
         <a>
           <img src="/shopping-cart.svg" alt="Carrito de compras"/>
-          <span>{shoppingCart.length}</span>
+          <span data-testid="card-notification-badge">{shoppingCart.length}</span>
         </a>
       </Link>
     </div>

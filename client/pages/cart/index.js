@@ -6,6 +6,7 @@ import SearchBar from '../../components/SearchBar'
 import ShoppingCart from '../../components/ShoppingCart'
 
 
+
 const useCart = () => {
   return useSelector(
     (state) => ({
@@ -16,10 +17,7 @@ const useCart = () => {
 }
 
 const Cart = () => {
-
   const { shoppingCart } = useCart();
-
-  console.log('shoppingCart',shoppingCart);
 
   return (
     <Layout>
